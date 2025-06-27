@@ -2,104 +2,78 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
 
-    <!-- GIF Background -->
-
-
-    <!-- Welcome Text -->
-
-    <!-- Start Button -->
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/welcome_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/welcome_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:src="@drawable/welcome_background" />
 
     <TextView
-        android:id="@+id/welcome_text1"
+        android:id="@+id/welcome_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:shadowColor="#000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="4"
-        android:text="Use headphone for Better Experience"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/start_button"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/orbitron_bold"
+        android:text="Sky Hopper"
+        android:textColor="@color/text_light"
+        android:textSize="48sp"
+        android:shadowColor="@color/neon_glow"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.148" />
-
-    <TextView
-        android:id="@+id/welcome_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="16dp"
-        android:shadowColor="#000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="4"
-        android:text="Welcome to Sky Hopper!\n"
-        android:textColor="#0097A7"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/start_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/welcome_instructions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/orbitron"
+        android:gravity="center"
+        android:text="Drag planets into the Black Hole"
+        android:textColor="@color/text_highlight_neon"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/welcome_tip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/welcome_text2"
+        android:id="@+id/welcome_tip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/orbitron"
         android:gravity="center"
-        android:padding="10dp"
-        android:shadowColor="#483154"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="4"
-        android:text="Drag and Throw Planets into\n black hole"
-        android:textColor="#FF00DD"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:text="Use headphones for a better experience"
+        android:textColor="@color/text_light"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@id/start_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/start_button"
-        style="@android:style/Widget.DeviceDefault.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#0097A7"
-        android:elevation="4dp"
-        android:padding="16dp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/button_background_selector"
+        android:fontFamily="@font/orbitron_bold"
         android:text="Start Game"
-        android:textColor="#FFFFFF"
+        android:textAllCaps="true"
+        android:textColor="@color/button_text_color_selector"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcome_text" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

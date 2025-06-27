@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="dark_background">#1A1224</color> <color name="accent_cyan">#00E5FF</color>
+    <color name="text_light">#E0E0E0</color>
+    <color name="text_highlight_neon">#F50057</color>
+    <color name="neon_glow">#F50057</color>
 </resources>
